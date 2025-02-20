@@ -43,21 +43,21 @@ this code allows mobile app usage-->
 
 	
 <script>
-//this code declares a total number of questions and inital values for allergy cold indication//
+//this code declares a total number of questions and inital values for stomach flu food poisoning indication//
 	var totalQuestions =6
         var allergy_count = 0;
         var cold_count = 0;
-// this code increases the cold count everytime the answer is associated with an allergy//
+// this code increases the stomach flu count everytime the answer is associated with the stomach flu//
 	function allergyAdd(){
             allergy_count = allergy_count + 1;
 
         }
-// this code increases the cold count everytime the answer is associated with a cold//
+// this code increases the cold count everytime the answer is associated with food poisoning//
 	function coldAdd(){
 		cold_count = cold_count + 1;
 
         }
-//this code uses the previous code to establish the probability of test taker having a cold or allergy//
+//this code uses the previous code to establish the probability of test taker having the stomach flu or food poisoning//
 	function getResult() {
 //the next two lines set the precise precentages using the responses//
 	var allergyPercent = (allergy_count/totalQuestions)*100
@@ -134,7 +134,7 @@ the section below tells us that page is visible if shifted to left-->
 </div>
 <!--this code sets an introduction and the button directs it to the first question-->	
 <div id="content0" class="w3-container">
-	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
+	<p>Are you feeling like you might have the stomach flu but wonder if it is food poisoning. Answer a few short questions to find out!</p>
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
 	
@@ -150,7 +150,7 @@ the section below tells us that page is visible if shifted to left-->
 	</div>
 
     	<div id="content1" class="w3-container">
-        <p>Are your eyes watery or itchy?.</p>  
+        <p>Are you experiencing sensitivity to the smell of food?</p>  
 	</div>
 <!--this code moves the taker to the next question on page two if they click yes-->
 		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
@@ -166,7 +166,7 @@ the section below tells us that page is visible if shifted to left-->
 	</div>
 	
 	<div id="content2" class="w3-container">
-		<p>Do you have a fever?.</p>  
+		<p>Is your pain located in your lower abdomen?</p>  
 	</div>			
 		<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
          	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
@@ -182,7 +182,7 @@ the section below tells us that page is visible if shifted to left-->
 	</div>
 	
     	<div id="content3" class="w3-container">
-        <p>Do you have a sore throat?.</p> 
+        <p>Are you feeling dehydrated?</p> 
 	</div>	
 	
 		<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
@@ -198,7 +198,7 @@ the section below tells us that page is visible if shifted to left-->
 	</div>
 	
     	<div id="content4" class="w3-container">
-        	<p>Are your symptoms seasonal or chronic?.</p>
+        	<p>Do you have a fever?</p>
 	</div>
 		<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
          	<a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
@@ -214,7 +214,7 @@ the section below tells us that page is visible if shifted to left-->
 	</div>
 	
     	<div id="content5" class="w3-container">
-        	<p>Is your mucus discolored?.</p>
+        	<p>Have you been experiencing symptoms for more than 2 days?</p>
 	</div>
 		<a href="#six"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
          	<a href="#six"  onclick="coldAdd();" class="w3-btn w3-black">No</a>	
@@ -228,7 +228,7 @@ the section below tells us that page is visible if shifted to left-->
 	</div>
 	
     	<div id="content5" class="w3-container">
-        	<p>Do you have body aches?.</p>
+        	<p>Are you experiencing vomiting?.</p>
 	</div>
 		<a href="#results"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
          	<a href="#results"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>	
