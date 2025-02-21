@@ -17,11 +17,9 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+To code for a website that helps the user determine whether the symptoms they are experiencing correspond to a stomach flu and food poisoning.
  
 Known Issues:
-blah, blah, blah, blah
-Ignore this error message if you see it using the javaScript console: Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'.
 
 References:
 https://www.w3schools.com/w3css/default.asp
@@ -69,7 +67,7 @@ this code allows mobile app usage-->
 	if (totalPercent !==100) {
 
 		var scale = 100 / totalPercent ;
-		FoodposioningPercent *= scale;
+		FoodpoisoningPercent *= scale;
 		StomachfluPercent *=scale;
 	}	
 //this code establishes result text as the ID that will trigger the results//
@@ -85,7 +83,7 @@ location.href= "#results";
 //this code resets the test and resets the system to accept new answers//
 function restartTest() {
 	Stomachflu_count= 0;
-	Foodposioning_count=0;
+	Foodpoisoning_count=0;
 //this code clears the answers//	
 	document.getElementById("resultText").innerHTML = "";
 //this code resets the exam to start over and and return to page one//
@@ -153,13 +151,13 @@ the section below tells us that page is visible if shifted to left-->
         <p>Are you experiencing sensitivity to the smell of food?</p>  
 	</div>
 <!--this code moves the taker to the next question on page two if they click yes-->
-		<a href="#two"  onclick="FoodpoisoningAdd();" class="w3-btn w3-black"> Yes</a>
+	<a href="#two"  onclick="FoodpoisoningAdd();" class="w3-btn w3-black"> Yes</a>
 <!--this code runs the food poisoning add and moves to page two if they click no-->
-<a href="#two"  onclick="StomachfluAdd();" class="w3-btn w3-black">No</a>
+	<a href="#two"  onclick="StomachfluAdd();" class="w3-btn w3-black">No</a>
     </div>
 </div>
 	
-<!--the same code above is repeated for the following 4 questions-->	
+<!--the same code above is repeated for the following 4 questions but with varying results-->	
 <div class="page" id="two">
 	<div class="w3-container w3-flat-carrot">
 	<h1>Question 2</h1>
@@ -201,7 +199,7 @@ the section below tells us that page is visible if shifted to left-->
         	<p>Do you have a fever?</p>
 	</div>
 		<a href="#five"  onclick="StomachfluAdd();" class="w3-btn w3-black"> Yes</a>
-         	<a href="#five"  onclick="Foodpoisoning();" class="w3-btn w3-black">No</a>
+         	<a href="#five"  onclick="FoodpoisoningAdd();" class="w3-btn w3-black">No</a>
     	
 	</div>
 </div>
@@ -244,7 +242,7 @@ the section below tells us that page is visible if shifted to left-->
 </div>
 	<div id= "content" class="w3 container">
 		<p>Click the button below to discover your fate!</p>
-		<a href="#results" class="w3-btn w3-black" onclick= "getResult();">See Results</button>	
+		<a href="#results" class="w3-btn w3-black" onclick= "getResult();">See Results</a>	
 	</div>
 
 <!--this code uses the answers to compute results and displays them upon a click-->
