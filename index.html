@@ -45,38 +45,38 @@ this code allows mobile app usage-->
 <script>
 //this code declares a total number of questions and inital values for stomach flu food poisoning indication//
 	var totalQuestions =6
-        var allergy_count = 0;
-        var cold_count = 0;
+        var Stomachflu_count = 0;
+        var Foodpoisoning_count = 0;
 // this code increases the stomach flu count everytime the answer is associated with the stomach flu//
-	function allergyAdd(){
-            allergy_count = allergy_count + 1;
+	function StomachfluAdd(){
+            Stomachflu_count = Stomachflu_count + 1;
 
         }
 // this code increases the cold count everytime the answer is associated with food poisoning//
-	function coldAdd(){
-		cold_count = cold_count + 1;
+	function FoodpoisoningAdd(){
+		Foodpoisoning_count = Foodpoisoning_count + 1;
 
         }
 //this code uses the previous code to establish the probability of test taker having the stomach flu or food poisoning//
 	function getResult() {
 //the next two lines set the precise precentages using the responses//
-	var allergyPercent = (allergy_count/totalQuestions)*100
+	var StomachfluPercent = (Stomachflu_count/totalQuestions)*100
 		
-	var coldPercent = (cold_count/totalQuestions)*100
+	var FoodpoisoningPercent = (Foodpoisoning_count/totalQuestions)*100
 //this code adds the probabilities together//
-	var totalPercent = allergyPercent + coldPercent;
+	var totalPercent = FoodpoisoningPercent + StomachfluPercent;
 //the following section makes sure the total equals 100% by adding a scaling factor//	
 	if (totalPercent !==100) {
 
 		var scale = 100 / totalPercent ;
-		allergyPercent *= scale;
-		coldPercent *=scale;
+		FoodposioningPercent *= scale;
+		StomachfluPercent *=scale;
 	}	
 //this code establishes result text as the ID that will trigger the results//
 	var resultText = document.getElementById("resultText");
 
 //this code establishes the content of the results by setting the formula//
-resultText.innerHTML = "Probability it is allergies =" + allergyPercent.toFixed(2) + "<br> Probability it is a cold =" + coldPercent.toFixed(2); 
+resultText.innerHTML = "Probability it is Stomach flu =" + StomachfluPercent.toFixed(2) + "<br> Probability it is a Food poisoning =" + FoodpoisoningPercent.toFixed(2); 
 
 //this code sends the test taker to the results page//
 		
@@ -84,8 +84,8 @@ location.href= "#results";
 	}
 //this code resets the test and resets the system to accept new answers//
 function restartTest() {
-	allergy_count= 0;
-	cold_count=0;
+	Stomachflu_count= 0;
+	Foodposioning_count=0;
 //this code clears the answers//	
 	document.getElementById("resultText").innerHTML = "";
 //this code resets the exam to start over and and return to page one//
@@ -130,11 +130,11 @@ the section below tells us that page is visible if shifted to left-->
 	
 <!--this code sets the first page of the exam with a color and name-->
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>Cold or Allergies?</h1>
+	<h1>Stomach flu or Food poisoning?</h1>
 </div>
 <!--this code sets an introduction and the button directs it to the first question-->	
 <div id="content0" class="w3-container">
-	<p>Are you feeling like you might have the stomach flu but wonder if it is food poisoning. Answer a few short questions to find out!</p>
+	<p>Are you feeling like you might have the Stomach Flu but wonder if it is Food Poisoning. Answer a few short questions to find out!</p>
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
 	
@@ -153,9 +153,9 @@ the section below tells us that page is visible if shifted to left-->
         <p>Are you experiencing sensitivity to the smell of food?</p>  
 	</div>
 <!--this code moves the taker to the next question on page two if they click yes-->
-		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-<!--this code runs the cold add and moves to page two if they click no-->
-<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+		<a href="#two"  onclick="FoodpoisoningAdd();" class="w3-btn w3-black"> Yes</a>
+<!--this code runs the food poisoning add and moves to page two if they click no-->
+<a href="#two"  onclick="StomachfluAdd();" class="w3-btn w3-black">No</a>
     </div>
 </div>
 	
@@ -168,8 +168,8 @@ the section below tells us that page is visible if shifted to left-->
 	<div id="content2" class="w3-container">
 		<p>Is your pain located in your lower abdomen?</p>  
 	</div>			
-		<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-         	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+		<a href="#three"  onclick="FoodpoisoningAdd();" class="w3-btn w3-black"> Yes</a>
+         	<a href="#three"  onclick="StomachfluAdd();" class="w3-btn w3-black">No</a>
 	</div>	
 
 </div>
@@ -185,8 +185,8 @@ the section below tells us that page is visible if shifted to left-->
         <p>Are you feeling dehydrated?</p> 
 	</div>	
 	
-		<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-         	<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+		<a href="#four"  onclick="FoodpoisoningAdd();" class="w3-btn w3-black"> Yes</a>
+         	<a href="#four"  onclick="StomachfluAdd();" class="w3-btn w3-black">No</a>
     	</div>
 </div>
 	
@@ -200,8 +200,8 @@ the section below tells us that page is visible if shifted to left-->
     	<div id="content4" class="w3-container">
         	<p>Do you have a fever?</p>
 	</div>
-		<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-         	<a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+		<a href="#five"  onclick="StomachfluAdd();" class="w3-btn w3-black"> Yes</a>
+         	<a href="#five"  onclick="Foodpoisoning();" class="w3-btn w3-black">No</a>
     	
 	</div>
 </div>
@@ -216,8 +216,8 @@ the section below tells us that page is visible if shifted to left-->
     	<div id="content5" class="w3-container">
         	<p>Have you been experiencing symptoms for more than 2 days?</p>
 	</div>
-		<a href="#six"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-         	<a href="#six"  onclick="coldAdd();" class="w3-btn w3-black">No</a>	
+		<a href="#six"  onclick="StomachfluAdd();" class="w3-btn w3-black"> Yes</a>
+         	<a href="#six"  onclick="FoodposioningAdd();" class="w3-btn w3-black">No</a>	
 </div>
 
 <!--this code follows the same procedure a question 1, but it directs to the sixth page-->
@@ -230,8 +230,8 @@ the section below tells us that page is visible if shifted to left-->
     	<div id="content5" class="w3-container">
         	<p>Are you experiencing vomiting?.</p>
 	</div>
-		<a href="#results"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
-         	<a href="#results"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>	
+		<a href="#results"  onclick="FoodpoisoningAdd();" class="w3-btn w3-black"> Yes</a>
+         	<a href="#results"  onclick="StomachfluAdd();" class="w3-btn w3-black">No</a>	
 </div>
 
 </div>
