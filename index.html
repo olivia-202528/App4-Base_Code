@@ -132,21 +132,22 @@ function restartTest() {
 the section below tells us that page is visible if shifted to left-->
 	
 <!--this code sets the first page of the exam with a color and name-->
-<div id="header" class="w3-container w3-flat-carrot">
+	<div id="header" class="w3-container w3-flat-carrot">
 	<h1>Stomach flu or Food poisoning?</h1>
-</div>
+	</div>
 <!--this code sets an introduction and the button directs it to the first question-->	
-<div id="content0" class="w3-container">
+	<div id="content0" class="w3-container">
 	<p>Are you feeling like you might have the Stomach Flu but wonder if it is Food Poisoning. Answer a few short questions to find out!</p>
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
-	
-<div class="w3-container w3-center">
-<img id="resizableImage"
+<!--this code introduces an image and places it into the middle of the page-->	
+	<div class="w3-container w3-center">
+<!--this code shows the picture and gives it an ID and dimensions-->
+	<img id="resizableImage"
 	src="https://t4.ftcdn.net/jpg/04/74/60/67/360_F_474606704_PccTCgf86Bm3BgVFtuQCzztjnohfOisw.jpg"
 	alt="Person with stomach pain" 
 	style="width: 300px; height: auto;">
-</div>
+	</div>
 	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
@@ -154,7 +155,7 @@ the section below tells us that page is visible if shifted to left-->
 	
 <!--The following code marks off the first page and gives it a header. The code above tells us that there is a division in the pages- each div has to have a pair in order to run properly-->
 
-<div class="page" id="one">
+	<div class="page" id="one">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 1</h1>
 	</div>
@@ -162,12 +163,12 @@ the section below tells us that page is visible if shifted to left-->
     	<div id="content1" class="w3-container">
         <p>Are you experiencing sensitivity to the smell of food?</p> 
 	</div>
-<!--this code moves the taker to the next question on page two if they click yes-->
+<!--this code moves the taker to the next question on page two if they click yes and adds to the running count of food poisoning that is factored into results-->
 	<a href="#two"  onclick="FoodpoisoningAdd();" class="w3-btn w3-black"> Yes</a>
 <!--this code runs the food poisoning add and moves to page two if they click no-->
 	<a href="#two"  onclick="StomachfluAdd();" class="w3-btn w3-black">No</a>
     </div>
-</div>
+	</div>
 	
 <!--the same code above is repeated for the following 4 questions but with varying results-->	
 <div class="page" id="two">
@@ -182,11 +183,11 @@ the section below tells us that page is visible if shifted to left-->
          	<a href="#three"  onclick="StomachfluAdd();" class="w3-btn w3-black">No</a>
 	</div>	
 
-</div>
+	</div>
 
 <!--this code follows the same procedure as question 1, but it directs to the third page instead-->
 	
-<div class="page" id="three">
+	<div class="page" id="three">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 3</h1>
 	</div>
@@ -198,11 +199,11 @@ the section below tells us that page is visible if shifted to left-->
 		<a href="#four"  onclick="FoodpoisoningAdd();" class="w3-btn w3-black"> Yes</a>
          	<a href="#four"  onclick="StomachfluAdd();" class="w3-btn w3-black">No</a>
     	</div>
-</div>
+	</div>
 	
-<!--this code follows the same procedure as question 1, but it directs to the fouth page instead-->
+<!--this code follows the same procedure as question 1, but it directs to the fourth page instead-->
 
-<div class="page" id="four">
+	<div class="page" id="four">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 4</h1>
 	</div>
@@ -210,15 +211,16 @@ the section below tells us that page is visible if shifted to left-->
     	<div id="content4" class="w3-container">
         	<p>Do you have a fever?</p>
 	</div>
+<!--Instead of yes defaulting to food poisoning, it will now add to the stomach flu count-->
 		<a href="#five"  onclick="StomachfluAdd();" class="w3-btn w3-black"> Yes</a>
          	<a href="#five"  onclick="FoodpoisoningAdd();" class="w3-btn w3-black">No</a>
     	
 	</div>
-</div>
+	</div>
 
 <!--this code follows the same procedure as question 1, but it directs to the fifth page instead-->
 
-<div class="page" id="five">
+	<div class="page" id="five">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 5</h1>
 	</div>
@@ -228,11 +230,11 @@ the section below tells us that page is visible if shifted to left-->
 	</div>
 		<a href="#six"  onclick="StomachfluAdd();" class="w3-btn w3-black"> Yes</a>
          	<a href="#six"  onclick="FoodposioningAdd();" class="w3-btn w3-black">No</a>	
-</div>
+	</div>
 
 <!--this code follows the same procedure a question 1, but it directs to the sixth page-->
 	
-<div class="page" id="six">
+	<div class="page" id="six">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 6</h1>
 	</div>
@@ -242,16 +244,16 @@ the section below tells us that page is visible if shifted to left-->
 	</div>
 		<a href="#results"  onclick="FoodpoisoningAdd();" class="w3-btn w3-black"> Yes</a>
          	<a href="#results"  onclick="StomachfluAdd();" class="w3-btn w3-black">No</a>	
-</div>
+	</div>
 
-</div>
+	</div>
 	
 <!--this code follows the same procedure as question 1, but it directs to the results page instead-->
 	
-<div class="page" id="results">
+	<div class="page" id="results">
 	<div id="header" class="w3-container w3-flat-carrot">		
 		<h1>Results</h1>
-</div>
+	</div>
 	<div id= "content" class="w3 container">
 		<p>Click the button below to discover your fate!</p>
 		<a href="#results" class="w3-btn w3-black" onclick= "getResult();">See Results</a>	
@@ -259,21 +261,21 @@ the section below tells us that page is visible if shifted to left-->
 
 <!--this code uses the answers to compute results and displays them upon a click-->
 	
-<div id="resultContainer" class="w3 container">
+	<div id="resultContainer" class="w3 container">
 	<button onclick="getResult();" class="w3-button w3-white w3-round w3-hover-green"><b>Results</b></button>
 	<p id="resultText"></p>
 <!--this code uses the code established earlier to reset the test to page 1-->
 	<button onclick="restartTest();" class="w3-button w3-white w3-round w3-hover-red"><b>Restart Test</b></button>
 
 	</div>
-</div>
+	</div>
 <!--this code adds a footer to the page in the same format as the header-->
-<footer class="w3-bottom w3-container w3-flat-carrot">
+	<footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
-</footer>
+	</footer>
 		
-</body>
+	</body>
 	
-</html>
+	</html>
 
 <!--I used mentor aide and ChatGPT to resolve issues in the code-->
